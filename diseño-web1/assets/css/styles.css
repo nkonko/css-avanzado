@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #04B4E0;
+    --background-color: #F2F7F9;
+    
+    --icons-color: #B5B6B7;
+    --title-color: #222222;
+    --subtitle-color: #888;
+    --text-color: #555;
+}
+
 @font-face {
     font-family: 'Poppins';
     src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
@@ -5,13 +16,35 @@
     font-style: normal;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    font-size: 10px;
 }
 
 body {
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: auto;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+.layout {
+    position: relative;
+    min-width: 1290px;
+    min-width: 80vh;
+    width: 75%;
+    height: 80vh;
+    margin: 10vh auto;
+
+    display: grid;
+    grid-template-areas: "aside content";
+    grid-template-columns: 30% 70%;
+}
+
+
+
